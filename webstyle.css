@@ -1,0 +1,29 @@
+body
+{margin: 0;
+ border: 0;
+ padding: 0px;
+ border-top: #000 18px solid;
+}
+
+p,td {font-size: 10pt; font-family: tahoma; }
+
+a:link {color: #0055a5; text-decoration:none; }
+a:visited {color: #0055a5; text-decoration:none; }
+a:hover {color: #900; text-decoration:none; }
+
+img {border-width: 1px; border-color: #000000; border-style: solid; }
+
+#menu {text-align:right;width: 100%;margin-top:0px;border-bottom:1px dotted #000000; }
+#menu a {color:#393939;font-weight:bold;}
+.menulinks {line-height:1.7em; margin:0 0 0 0;}
+.menulink {padding:6px 8px 5px 8px; font-size:12pt; margin:0 0 0 2px;}
+.menulink:hover {background-color:#e6e6e6; }
+.active {background-color:#e6e6e6; }
+.active:hover {background-color:#e6e6e6; }
+
+.sectiontitle{font-size: 13pt; font-family: tahoma; font-weight: bold;}
+
+.news{font-size: 8.5pt; color: #111; font-family: arial; line-height:166%}
+.footnotes{font-size: 7pt; color: #555; font-family: verdana; line-height:136%}
+
+#counter img {border-width:0px;}
