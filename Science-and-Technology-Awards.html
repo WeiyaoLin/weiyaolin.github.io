@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Excellent Product & Industry Cooperation Innovation Awards</title>
+    <title>Science and Technology Awards</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,8 +34,9 @@
             justify-content: center; /* 整体居中 */
             align-items: flex-start; /* 顶部对齐 */
             gap: 20px; /* 图片间距 */
-            flex-wrap: nowrap; /* 【关键】禁止换行，确保一直是一左一右 */
+            flex-wrap: nowrap; /* 禁止换行，确保一直是一左一右 */
             width: 100%;
+            margin-bottom: 20px; /* 如果有多行，行与行之间留空 */
         }
 
         /* 图片容器 */
@@ -43,35 +44,26 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            flex: 0 1 auto; /* 允许容器根据内容缩小 */
+            flex: 0 1 auto;
         }
 
         /* 图片样式 */
         .img-box img {
-            height: 350px; /* 【关键】设定统一高度 */
-            width: auto;   /* 宽度按比例自适应 */
-            max-width: 100%; /* 防止图片过大撑破容器 */
+            height: 350px; /* 统一高度，保证整齐 */
+            width: auto;   /* 宽度自适应 */
+            max-width: 100%;
             border: 1px solid #ddd;
             box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-            object-fit: contain; /* 保持图片比例 */
+            object-fit: contain;
         }
 
-        /* 01 02 各自下方的文字 */
+        /* 下方说明文字 */
         .bottom-caption-individual {
             font-size: 14px;
             color: #555;
             margin-top: 10px;
             text-align: center;
             max-width: 400px; /* 限制文字宽度，防止太宽 */
-        }
-
-        /* 03 04 共用的下方文字 */
-        .shared-bottom-caption {
-            text-align: center;
-            font-size: 15px;
-            color: #333;
-            margin-top: 15px;
-            font-style: italic;
         }
 
         a {
@@ -82,8 +74,7 @@
             text-decoration: underline;
         }
 
-        /* 仅在屏幕极小（手机竖屏）时才允许变成上下排列，
-           如果您希望手机上也强行左右，可以删除下面这段 @media 代码 */
+        /* 手机适配 */
         @media (max-width: 600px) {
             .images-container {
                 flex-wrap: wrap;
@@ -97,28 +88,28 @@
 </head>
 <body>
 
-    <h2>Excellent Product & Industry Cooperation Innovation Awards</h2>
+    <h2>Science and Technology Awards</h2>
 
-    <!-- 第一组: 01 & 02 -->
+    <!-- 第一组: 07 & 08 -->
     <div class="award-section">
         <div class="top-caption">
-            (1) Excellent Product Award of China HI-TECH FAIR, 2022 (collaboration & application with Clobotics)
+            (1) Shanghai Science and Technology Award
         </div>
 
         <div class="images-container">
-            <!-- 01 左边 -->
+            <!-- 07 -->
             <div class="img-box">
-                <img src="01.jpg" alt="Certificate 01">
+                <img src="07.jpg" alt="Certificate 07">
                 <div class="bottom-caption-individual">
-                    Certificate of the Award
+                    First Prize of Shanghai Science and Technology Progress Award, 2022
                 </div>
             </div>
 
-            <!-- 02 右边 -->
+            <!-- 08 -->
             <div class="img-box">
-                <img src="02.jpg" alt="Certificate 02">
+                <img src="08.jpg" alt="Certificate 08">
                 <div class="bottom-caption-individual">
-                    Complete information of the awardees (with Principal Leader: Weiyao Lin) and award-winning institutions (Shanghai Jiao Tong University and Clobotics)
+                    First Prize of Shanghai Technological Invention Award, 2017
                 </div>
             </div>
         </div>
@@ -126,47 +117,75 @@
 
     <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
 
-    <!-- 第二组: 03 & 04 -->
+    <!-- 第二组: 09 & 10 -->
     <div class="award-section">
         <div class="top-caption">
-            (2) Outstanding Exhibits Award (University Pavilion) of China International Industry Expo, 2023 (collaboration & application with Clobotics)
+            (2) CAAI Science and Technology Progress Award 2020 (collaboration & application with HiSense)
         </div>
 
         <div class="images-container">
-            <!-- 03 左边 -->
+            <!-- 09 -->
             <div class="img-box">
-                <img src="03.jpg" alt="Certificate 03">
+                <img src="09.jpg" alt="Certificate 09">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Principal Leader: Weiyao Lin
+                </div>
             </div>
 
-            <!-- 04 右边 -->
+            <!-- 10 -->
             <div class="img-box">
-                <img src="04.jpg" alt="Certificate 04">
+                <img src="10.jpg" alt="Certificate 10">
+                <div class="bottom-caption-individual">
+                    Complete information of the awardees and award-winning institutions (Shanghai Jiao Tong University and Hisense)
+                </div>
             </div>
-        </div>
-
-        <!-- 03 04 共用底部文字 -->
-        <div class="shared-bottom-caption">
-            Certificate of the Award-Winning Institutions: Shanghai Jiao Tong University & Clobotics, and the Award’s Principal Leader: Weiyao Lin
         </div>
     </div>
 
     <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
 
-    <!-- 第三组: 05 & 06 -->
+    <!-- 第三组: 11, 12, 13, 14 -->
+    <!-- 由于有4张图，这里分为两行显示，每行两张，以保持排版一致性 -->
     <div class="award-section">
         <div class="top-caption">
-            (3) China Industry-University-Research Cooperation Innovation Award, 2022
+            (3) China Ministry of Education (MoE) Technological Invention Award 2022 (collaboration & application with HiSense and Clobotics)
         </div>
 
+        <!-- 第一行: 11 & 12 -->
         <div class="images-container">
-            <!-- 05 左边 -->
+            <!-- 11 -->
             <div class="img-box">
-                <img src="05.jpg" alt="Certificate 05">
+                <img src="11.jpg" alt="Certificate 11">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Principal Leader: Weiyao Lin
+                </div>
             </div>
 
-            <!-- 06 右边 -->
+            <!-- 12 -->
             <div class="img-box">
-                <img src="06.jpg" alt="Certificate 06">
+                <img src="12.jpg" alt="Certificate 12">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s First Institution: Shanghai Jiao Tong University
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二行: 13 & 14 -->
+        <div class="images-container">
+            <!-- 13 -->
+            <div class="img-box">
+                <img src="13.jpg" alt="Certificate 13">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Second Institution: Clobotics
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="img-box">
+                <img src="14.jpg" alt="Certificate 14">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Third Institution: Hisense
+                </div>
             </div>
         </div>
     </div>
