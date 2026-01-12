@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates of Weiyao Lin’s Representative Talks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 1100px;
+            color: #333;
+        }
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        /* 每一行的容器 */
+        .row-container {
+            display: flex;
+            justify-content: center; /* 居中对齐 */
+            align-items: flex-end;   /* 底部对齐，确保图片底边对齐 */
+            gap: 40px;               /* 左右两个块之间的间距 */
+            margin-bottom: 50px;     /* 行与行之间的间距 */
+            flex-wrap: nowrap;       /* 强制不换行，保持左右排列 */
+        }
+
+        /* 单个项目块 */
+        .item-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;                 /* 平均分配宽度 */
+            max-width: 500px;        /* 限制最大宽度 */
+        }
+
+        /* 图片上方的文字标题 */
+        .item-caption {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;     /* 文字和图片之间的距离 */
+            text-align: center;
+            min-height: 45px;        /* 预留高度，防止文字行数不同导致图片没对齐 */
+            display: flex;
+            align-items: flex-end;   /* 文字靠下对齐 */
+            justify-content: center;
+        }
+
+        /* 图片样式 */
+        .item-box img {
+            height: 350px;           /* 固定高度，保证整齐 */
+            width: auto;             /* 宽度自适应 */
+            max-width: 100%;         /* 防止溢出 */
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            object-fit: contain;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 手机端适配：屏幕变窄时改为单列 */
+        @media (max-width: 700px) {
+            .row-container {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .item-box {
+                flex: 100%;
+                max-width: 100%;
+            }
+            .item-box img {
+                height: auto;
+                width: 100%;
+            }
+            .item-caption {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Certificates of Weiyao Lin’s Representative Talks</h2>
+
+    <!-- 第一行: 15 & 16 -->
+    <div class="row-container">
+        <!-- 15 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (1) Keynote talk in AAAI-Global South AI workshop
+            </div>
+            <img src="15.png" alt="Certificate 15">
+        </div>
+
+        <!-- 16 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (2) Tutorial in ICME 2025
+            </div>
+            <img src="16.jpg" alt="Certificate 16">
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第二行: 17 & 18 -->
+    <div class="row-container">
+        <!-- 17 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (3) Tutorial in ACCV 2020
+            </div>
+            <img src="17.jpg" alt="Certificate 17">
+        </div>
+
+        <!-- 18 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (4) Tutorial in APSIPA ASC 2020
+            </div>
+            <img src="18.png" alt="Certificate 18">
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第三行: 19 (单独居中) -->
+    <div class="row-container">
+        <!-- 19 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (5) Panel Talk in ICME 2019
+            </div>
+            <img src="19.png" alt="Certificate 19">
+        </div>
+    </div>
+
+    <br><br>
+    <hr color="#000000" size="1">
+    <!-- 注意：根据您的目录结构，如果此文件在 certificates 文件夹下，返回上一级 -->
+    <a href="./certicates.html">Back to Certificates List</a>
+
+</body>
+</html>
