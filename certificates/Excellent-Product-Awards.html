@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Excellent Product & Industry Cooperation Innovation Awards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 1000px; /* 稍微加宽一点，以便并排显示图片 */
+            color: #333;
+        }
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* 每一组奖项的容器 */
+        .award-section {
+            margin-bottom: 60px;
+        }
+
+        /* 上方总Caption样式 */
+        .top-caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        /* 图片容器：使用Flex布局实现并排 */
+        .images-container {
+            display: flex;
+            justify-content: space-between; /* 图片之间留空 */
+            gap: 20px; /* 间距 */
+            flex-wrap: wrap; /* 屏幕窄时自动换行 */
+        }
+
+        /* 单个图片块 */
+        .img-box {
+            flex: 1; /* 平均分配宽度 */
+            min-width: 300px; /* 防止图片缩得太小 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 图片样式 */
+        .img-box img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd; /* 给证书加个淡淡的边框 */
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* 增加一点阴影立体感 */
+        }
+
+        /* 下方Caption样式 */
+        .bottom-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+            width: 95%;
+        }
+
+        /* 针对03-04这种共用底部Caption的情况 */
+        .shared-bottom-caption {
+            text-align: center;
+            font-size: 15px;
+            color: #333;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Excellent Product & Industry Cooperation Innovation Awards</h2>
+
+    <!-- 第一组: 01 & 02 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (1) Excellent Product Award of China HI-TECH FAIR, 2022 (collaboration & application with Clobotics)
+        </div>
+
+        <div class="images-container">
+            <!-- 图片 01 -->
+            <div class="img-box">
+                <img src="01.jpg" alt="Certificate 01">
+                <div class="bottom-caption">
+                    Certificate of the Award
+                </div>
+            </div>
+
+            <!-- 图片 02 -->
+            <div class="img-box">
+                <img src="02.jpg" alt="Certificate 02">
+                <div class="bottom-caption">
+                    Complete information of the awardees (with Principal Leader: Weiyao Lin) and award-winning institutions (Shanghai Jiao Tong University and Clobotics)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第二组: 03 & 04 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (2) Outstanding Exhibits Award (University Pavilion) of China International Industry Expo, 2023 (collaboration & application with Clobotics)
+        </div>
+
+        <div class="images-container">
+            <!-- 图片 03 -->
+            <div class="img-box">
+                <img src="03.jpg" alt="Certificate 03">
+            </div>
+
+            <!-- 图片 04 -->
+            <div class="img-box">
+                <img src="04.jpg" alt="Certificate 04">
+            </div>
+        </div>
+
+        <!-- 03和04下方的总Caption -->
+        <div class="shared-bottom-caption">
+            Certificate of the Award-Winning Institutions: Shanghai Jiao Tong University & Clobotics, and the Award’s Principal Leader: Weiyao Lin
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第三组: 05 & 06 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (3) China Industry-University-Research Cooperation Innovation Award, 2022
+        </div>
+
+        <div class="images-container">
+            <!-- 图片 05 -->
+            <div class="img-box">
+                <img src="05.jpg" alt="Certificate 05">
+            </div>
+
+            <!-- 图片 06 -->
+            <div class="img-box">
+                <img src="06.jpg" alt="Certificate 06">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <hr color="#000000" size="1">
+    <!-- 返回上一级目录（Certificates列表页） -->
+    <a href="../certicates.html">Back to Certificates List</a>
+
+</body>
+</html>
