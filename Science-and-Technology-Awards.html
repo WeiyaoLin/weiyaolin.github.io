@@ -10,6 +10,7 @@
             margin: 40px auto;
             max-width: 1100px;
             color: #333;
+            padding: 0 20px; /* 增加一点内边距，防止小屏幕贴边 */
         }
         h2 {
             border-bottom: 2px solid #000;
@@ -28,15 +29,15 @@
             color: #000;
         }
 
-        /* 核心布局：强制不换行，保持一左一右 */
+        /* --- 核心布局修改开始 --- */
+
         .images-container {
             display: flex;
-            justify-content: center; /* 整体居中 */
-            align-items: flex-start; /* 顶部对齐 */
-            gap: 20px; /* 图片间距 */
-            flex-wrap: nowrap; /* 禁止换行，确保一直是一左一右 */
+            /* justify-content: center;  不需要了，因为子元素会填满宽度 */
+            align-items: flex-start;    /* 顶部对齐 */
+            gap: 40px;                  /* 增加一点间距，让两列分得更开一点 */
             width: 100%;
-            margin-bottom: 20px; /* 如果有多行，行与行之间留空 */
+            margin-bottom: 20px;
         }
 
         /* 图片容器 */
@@ -44,13 +45,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            flex: 0 1 auto;
+
+            /* 关键修改：强制平分宽度 */
+            flex: 1;        /* 让两个盒子各占剩余空间的比例为 1:1 */
+            width: 0;       /* 标准 Flexbox 技巧，忽略内容宽度，强制平分 */
         }
+
+        /* --- 核心布局修改结束 --- */
 
         /* 图片样式 */
         .img-box img {
-            height: 350px; /* 统一高度，保证整齐 */
-            width: auto;   /* 宽度自适应 */
+            height: 350px;
+            width: auto;
             max-width: 100%;
             border: 1px solid #ddd;
             box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -63,7 +69,7 @@
             color: #555;
             margin-top: 10px;
             text-align: center;
-            max-width: 400px; /* 限制文字宽度，防止太宽 */
+            max-width: 90%; /* 修改为百分比，适应容器宽度 */
         }
 
         a {
@@ -78,6 +84,12 @@
         @media (max-width: 600px) {
             .images-container {
                 flex-wrap: wrap;
+                gap: 30px;
+            }
+            .img-box {
+                /* 手机上取消强制平分，改为占满一行 */
+                flex: none;
+                width: 100%;
             }
             .img-box img {
                 height: auto;
@@ -97,7 +109,7 @@
         </div>
 
         <div class="images-container">
-            <!-- 07 -->
+            <!-- 07 (Row 1 Left) -->
             <div class="img-box">
                 <img src="07.jpg" alt="Certificate 07">
                 <div class="bottom-caption-individual">
@@ -105,7 +117,7 @@
                 </div>
             </div>
 
-            <!-- 08 -->
+            <!-- 08 (Row 1 Right) -->
             <div class="img-box">
                 <img src="08.jpg" alt="Certificate 08">
                 <div class="bottom-caption-individual">
@@ -124,7 +136,7 @@
         </div>
 
         <div class="images-container">
-            <!-- 09 -->
+            <!-- 09 (Row 2 Left) -->
             <div class="img-box">
                 <img src="09.jpg" alt="Certificate 09">
                 <div class="bottom-caption-individual">
@@ -132,7 +144,7 @@
                 </div>
             </div>
 
-            <!-- 10 -->
+            <!-- 10 (Row 2 Right) -->
             <div class="img-box">
                 <img src="10.png" alt="Certificate 10">
                 <div class="bottom-caption-individual">
@@ -145,7 +157,6 @@
     <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
 
     <!-- 第三组: 11, 12, 13, 14 -->
-    <!-- 由于有4张图，这里分为两行显示，每行两张，以保持排版一致性 -->
     <div class="award-section">
         <div class="top-caption">
             (3) China Ministry of Education (MoE) Technological Invention Award 2022 (collaboration & application with HiSense and Clobotics)
@@ -153,7 +164,7 @@
 
         <!-- 第一行: 11 & 12 -->
         <div class="images-container">
-            <!-- 11 -->
+            <!-- 11 (Row 3 Left) -->
             <div class="img-box">
                 <img src="11.png" alt="Certificate 11">
                 <div class="bottom-caption-individual">
@@ -161,7 +172,7 @@
                 </div>
             </div>
 
-            <!-- 12 -->
+            <!-- 12 (Row 3 Right) -->
             <div class="img-box">
                 <img src="12.png" alt="Certificate 12">
                 <div class="bottom-caption-individual">
@@ -172,7 +183,7 @@
 
         <!-- 第二行: 13 & 14 -->
         <div class="images-container">
-            <!-- 13 -->
+            <!-- 13 (Row 4 Left) -->
             <div class="img-box">
                 <img src="13.png" alt="Certificate 13">
                 <div class="bottom-caption-individual">
@@ -180,7 +191,7 @@
                 </div>
             </div>
 
-            <!-- 14 -->
+            <!-- 14 (Row 4 Right) -->
             <div class="img-box">
                 <img src="14.png" alt="Certificate 14">
                 <div class="bottom-caption-individual">
