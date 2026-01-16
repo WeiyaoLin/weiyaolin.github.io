@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Science and Technology Awards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 1100px;
+            color: #333;
+            padding: 0 20px; /* 增加一点内边距，防止小屏幕贴边 */
+        }
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .award-section {
+            margin-bottom: 60px;
+        }
+
+        .top-caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        /* --- 核心布局修改开始 --- */
+
+        .images-container {
+            display: flex;
+            /* justify-content: center;  不需要了，因为子元素会填满宽度 */
+            align-items: flex-start;    /* 顶部对齐 */
+            gap: 40px;                  /* 增加一点间距，让两列分得更开一点 */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* 图片容器 */
+        .img-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* 关键修改：强制平分宽度 */
+            flex: 1;        /* 让两个盒子各占剩余空间的比例为 1:1 */
+            width: 0;       /* 标准 Flexbox 技巧，忽略内容宽度，强制平分 */
+        }
+
+        /* --- 核心布局修改结束 --- */
+
+        /* 图片样式 */
+        .img-box img {
+            height: 350px;
+            width: auto;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            object-fit: contain;
+        }
+
+        /* 下方说明文字 */
+        .bottom-caption-individual {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+            max-width: 90%; /* 修改为百分比，适应容器宽度 */
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 600px) {
+            .images-container {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .img-box {
+                /* 手机上取消强制平分，改为占满一行 */
+                flex: none;
+                width: 100%;
+            }
+            .img-box img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Science and Technology Awards</h2>
+
+    <!-- 第一组: 07 & 08 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (1) Shanghai Science and Technology Award
+        </div>
+
+        <div class="images-container">
+            <!-- 07 (Row 1 Left) -->
+            <div class="img-box">
+                <img src="07.jpg" alt="Certificate 07">
+                <div class="bottom-caption-individual">
+                    First Prize of Shanghai Science and Technology Progress Award, 2022
+                </div>
+            </div>
+
+            <!-- 08 (Row 1 Right) -->
+            <div class="img-box">
+                <img src="08.jpg" alt="Certificate 08">
+                <div class="bottom-caption-individual">
+                    First Prize of Shanghai Technological Invention Award, 2017
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第二组: 09 & 10 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (2) CAAI Science and Technology Progress Award 2020 (collaboration & application with HiSense)
+        </div>
+
+        <div class="images-container">
+            <!-- 09 (Row 2 Left) -->
+            <div class="img-box">
+                <img src="09.jpg" alt="Certificate 09">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Principal Leader: Weiyao Lin
+                </div>
+            </div>
+
+            <!-- 10 (Row 2 Right) -->
+            <div class="img-box">
+                <img src="10.png" alt="Certificate 10">
+                <div class="bottom-caption-individual">
+                    Complete information of the awardees and award-winning institutions (Shanghai Jiao Tong University and Hisense)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+    <!-- 第三组: 11, 12, 13, 14 -->
+    <div class="award-section">
+        <div class="top-caption">
+            (3) China Ministry of Education (MoE) Technological Invention Award 2022 (collaboration & application with HiSense and Clobotics)
+        </div>
+
+        <!-- 第一行: 11 & 12 -->
+        <div class="images-container">
+            <!-- 11 (Row 3 Left) -->
+            <div class="img-box">
+                <img src="11.png" alt="Certificate 11">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Principal Leader: Weiyao Lin
+                </div>
+            </div>
+
+            <!-- 12 (Row 3 Right) -->
+            <div class="img-box">
+                <img src="12.png" alt="Certificate 12">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s First Institution: Shanghai Jiao Tong University
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二行: 13 & 14 -->
+        <div class="images-container">
+            <!-- 13 (Row 4 Left) -->
+            <div class="img-box">
+                <img src="13.png" alt="Certificate 13">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Second Institution: Clobotics
+                </div>
+            </div>
+
+            <!-- 14 (Row 4 Right) -->
+            <div class="img-box">
+                <img src="14.png" alt="Certificate 14">
+                <div class="bottom-caption-individual">
+                    Certificate of the Award’s Third Institution: Hisense
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <hr color="#000000" size="1">
+    <a href="./certicates.html">Back to Certificates List</a>
+
+</body>
+</html>

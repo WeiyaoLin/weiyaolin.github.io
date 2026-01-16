@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates of Weiyao Lin’s Representative Talks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 900px; /* 单列模式下稍微窄一点更好看 */
+            color: #333;
+            text-align: center; /* 让整个页面的文字默认居中 */
+        }
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 50px;
+            text-align: left; /* 标题保持靠左，或者居中也可以，这里保持原风格靠左 */
+        }
+
+        /* 容器样式：核心修改 */
+        .row-container {
+            display: flex;
+            flex-direction: column; /* 垂直排列，从上到下 */
+            align-items: center;    /* 居中对齐 */
+            gap: 60px;              /* 图片之间的垂直间距 */
+            margin-bottom: 30px;
+        }
+
+        /* 单个项目块 */
+        .item-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* 图片上方的文字标题 */
+        .item-caption {
+            font-size: 18px; /*稍微加大字体 */
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #000;
+        }
+
+        /* 图片样式 */
+        .item-box img {
+            height: 400px;           /* 单列时可以稍微放大一点高度 */
+            width: auto;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+            object-fit: contain;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 600px) {
+            .item-box img {
+                height: auto;
+                width: 100%; /* 手机上宽度占满 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Certificates of Weiyao Lin’s Representative Talks</h2>
+
+    <!-- 第一组 (原本是同一行，现在垂直堆叠) -->
+    <div class="row-container">
+        <!-- 15 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (1) Keynote talk in AAAI-Global South AI workshop
+            </div>
+            <img src="15.png" alt="Certificate 15">
+        </div>
+
+        <!-- 16 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (2) Tutorial in ICME 2025
+            </div>
+            <img src="16.jpg" alt="Certificate 16">
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 40px 0;">
+
+    <!-- 第二组 -->
+    <div class="row-container">
+        <!-- 17 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (3) Tutorial in ACCV 2020
+            </div>
+            <img src="17.jpg" alt="Certificate 17">
+        </div>
+
+        <!-- 18 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (4) Tutorial in APSIPA ASC 2020
+            </div>
+            <img src="18.png" alt="Certificate 18">
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 40px 0;">
+
+    <!-- 第三组 -->
+    <div class="row-container">
+        <!-- 19 -->
+        <div class="item-box">
+            <div class="item-caption">
+                (5) Panel Talk in ICME 2019
+            </div>
+            <img src="19.png" alt="Certificate 19">
+        </div>
+    </div>
+
+    <br><br>
+    <hr color="#000000" size="1">
+    <a href="./certicates.html">Back to Certificates List</a>
+
+</body>
+</html>
