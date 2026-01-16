@@ -32,30 +32,33 @@
 
         .images-container {
             display: flex;
-            justify-content: space-between; /* 两侧撑开，确保左右对称 */
+            /* 【修改 1】居中对齐，不再是两端对齐 */
+            justify-content: center;
             align-items: flex-start;
-            gap: 40px; /* 增加一点左右间距 */
+            gap: 40px; /* 图片左右之间的间距 */
             flex-wrap: nowrap;
             width: 100%;
         }
 
-        /* 图片容器：关键修改 */
+        /* 图片容器 */
         .img-box {
             display: flex;
             flex-direction: column;
-            align-items: center; /* 确保图片和文字在各自的半区内居中 */
+            align-items: center;
 
-            /* 【关键】flex: 1 强制左右两个盒子平分宽度（即各占50%）
-               这样能保证 1,3,5 永远在左半区的中心线，2,4,6 永远在右半区的中心线 */
-            flex: 1;
+            /* 【修改 2】
+               1. 取消 flex: 1 (不要撑满屏幕)
+               2. 设置固定宽度 (300px 约为原来的一半大小)
+               3. 设定固定宽度也能保证 1,3,5 和 2,4,6 上下依然是对齐的 */
+            flex: none;
+            width: 300px;
         }
 
-        /* 图片样式：关键修改 */
+        /* 图片样式 */
         .img-box img {
-            /* 【关键】改为宽度一致 */
-            width: 100%;      /* 让图片填满容器宽度 */
-            max-width: 480px; /* 设置一个最大宽度，防止在宽屏上图片过大 */
-            height: auto;     /* 高度自动，保持比例不拉伸 */
+            /* 【修改 3】让图片填满上面设定的 300px 盒子 */
+            width: 100%;
+            height: auto;
 
             border: 1px solid #ddd;
             box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -70,9 +73,7 @@
             color: #555;
             margin-top: 10px;
             text-align: center;
-            /* 文字宽度也可以跟随图片宽度，或者设置固定最大值 */
             width: 100%;
-            max-width: 480px;
         }
 
         /* 03 04 共用的下方文字 */
@@ -92,16 +93,15 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
+        /* 手机端适配 */
+        @media (max-width: 650px) {
             .images-container {
                 flex-wrap: wrap;
             }
             .img-box {
-                flex: 0 0 100%; /* 手机端强制占满一行 */
+                width: 100%; /* 手机上恢复占满宽度 */
+                max-width: 300px; /* 但限制最大宽度，防止图片过大 */
                 margin-bottom: 20px;
-            }
-            .img-box img {
-                max-width: 100%;
             }
         }
     </style>
