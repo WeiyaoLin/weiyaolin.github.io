@@ -28,33 +28,41 @@
             color: #000;
         }
 
-        /* 核心布局：强制不换行，保持一左一右 */
+        /* --- 核心布局修改开始 --- */
+
         .images-container {
             display: flex;
-            justify-content: center; /* 整体居中 */
-            align-items: flex-start; /* 顶部对齐 */
-            gap: 20px; /* 图片间距 */
-            flex-wrap: nowrap; /* 【关键】禁止换行，确保一直是一左一右 */
+            justify-content: space-between; /* 两侧撑开，确保左右对称 */
+            align-items: flex-start;
+            gap: 40px; /* 增加一点左右间距 */
+            flex-wrap: nowrap;
             width: 100%;
         }
 
-        /* 图片容器 */
+        /* 图片容器：关键修改 */
         .img-box {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            flex: 0 1 auto; /* 允许容器根据内容缩小 */
+            align-items: center; /* 确保图片和文字在各自的半区内居中 */
+
+            /* 【关键】flex: 1 强制左右两个盒子平分宽度（即各占50%）
+               这样能保证 1,3,5 永远在左半区的中心线，2,4,6 永远在右半区的中心线 */
+            flex: 1;
         }
 
-        /* 图片样式 */
+        /* 图片样式：关键修改 */
         .img-box img {
-            height: 350px; /* 【关键】设定统一高度 */
-            width: auto;   /* 宽度按比例自适应 */
-            max-width: 100%; /* 防止图片过大撑破容器 */
+            /* 【关键】改为宽度一致 */
+            width: 100%;      /* 让图片填满容器宽度 */
+            max-width: 480px; /* 设置一个最大宽度，防止在宽屏上图片过大 */
+            height: auto;     /* 高度自动，保持比例不拉伸 */
+
             border: 1px solid #ddd;
             box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-            object-fit: contain; /* 保持图片比例 */
+            object-fit: contain;
         }
+
+        /* --- 核心布局修改结束 --- */
 
         /* 01 02 各自下方的文字 */
         .bottom-caption-individual {
@@ -62,7 +70,9 @@
             color: #555;
             margin-top: 10px;
             text-align: center;
-            max-width: 400px; /* 限制文字宽度，防止太宽 */
+            /* 文字宽度也可以跟随图片宽度，或者设置固定最大值 */
+            width: 100%;
+            max-width: 480px;
         }
 
         /* 03 04 共用的下方文字 */
@@ -82,15 +92,16 @@
             text-decoration: underline;
         }
 
-        /* 仅在屏幕极小（手机竖屏）时才允许变成上下排列，
-           如果您希望手机上也强行左右，可以删除下面这段 @media 代码 */
         @media (max-width: 600px) {
             .images-container {
                 flex-wrap: wrap;
             }
+            .img-box {
+                flex: 0 0 100%; /* 手机端强制占满一行 */
+                margin-bottom: 20px;
+            }
             .img-box img {
-                height: auto;
-                width: 100%;
+                max-width: 100%;
             }
         }
     </style>
